@@ -1,6 +1,6 @@
 {
   "name": "com.microsoft.mixedrealitytoolkit",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "displayName": "Mixed Reality Toolkit 2",
   "description": "MRTK2 in a package",
   "unity": "2018.3",
