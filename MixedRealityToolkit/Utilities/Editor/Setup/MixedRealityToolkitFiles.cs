@@ -52,7 +52,7 @@ namespace Microsoft.MixedReality.Toolkit.Utilities.Editor
             }
         }
 
-        private const string MixedRealityToolkitDirectory = "MixedRealityToolkit";
+        private const string MixedRealityToolkitDirectory = "com.microsoft.mixedrealitytoolkit";
 
         private readonly static HashSet<string> mrtkFolders = new HashSet<string>();
         private readonly static Task searchForFoldersTask;
@@ -76,7 +76,7 @@ namespace Microsoft.MixedReality.Toolkit.Utilities.Editor
 
         static MixedRealityToolkitFiles()
         {
-            string path = Application.dataPath;
+            string path = $"{Application.dataPath}/../Packages";
             searchForFoldersTask = Task.Run(() => SearchForFoldersAsync(path));
         }
 
