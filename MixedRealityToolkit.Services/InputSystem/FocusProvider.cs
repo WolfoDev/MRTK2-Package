@@ -533,6 +533,8 @@ namespace Microsoft.MixedReality.Toolkit.Input
             uiRaycastCamera.targetDisplay = 0;
             uiRaycastCamera.stereoTargetEye = StereoTargetEyeMask.Both;
 
+            if (MixedRealityToolkit.Instance.ActiveProfile.CameraProfile.IsCameraPersistent) cameraObject.DontDestroyOnLoad();
+
             // Set target texture to specific pixel size so that drag thresholds are treated the same regardless of underlying
             // device display resolution.
             uiRaycastCameraTargetTexture = new RenderTexture(128, 128, 0);
